@@ -1,12 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import Htmlimg from './htmlImg';
+import Cssimg from "./cssImg";
+import Jsimg from "./jsImg";
+import HexaColor from "./Hexacolor";
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+        <div>
+              <HexaColor/>
+              <HexaColor/>
+              <HexaColor/>
+              <HexaColor/>
+              <HexaColor/>
+        </div>
   </React.StrictMode>,
   document.getElementById('root')
 );
