@@ -1,20 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import Htmlimg from './htmlImg';
-import Cssimg from "./cssImg";
-import Jsimg from "./jsImg";
+import Frontendimg from './frontendImg';
 import HexaColor from "./Hexacolor";
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
   <React.StrictMode>
         <div>
-              <HexaColor/>
-              <HexaColor/>
-              <HexaColor/>
-              <HexaColor/>
-              <HexaColor/>
+            <Frontendimg name="css"/>
+            <Frontendimg name="html"/>
+            <Frontendimg name="js"/>
         </div>
   </React.StrictMode>,
   document.getElementById('root')
