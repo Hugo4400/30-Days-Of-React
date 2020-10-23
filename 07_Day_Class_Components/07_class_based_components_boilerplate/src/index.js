@@ -7,22 +7,32 @@ import asabenehImage from './images/asabeneh.jpg'
 // Fuction to show month date year
 
 // User Card Component
-const UserCard = ({ user: { firstName, lastName, image } }) => (
-  <div className='user-card'>
-    <img src={image} alt={firstName} />
-    <h2>
-      {firstName}
-      {lastName}
-    </h2>
-  </div>
-)
+class UserCard extends React.Component {
+  render() {
+    const { firstName, lastName, image } = this.props.user
+    return (
+        <div className='user-card'>
+          <img src={image} alt={firstName} />
+          <h2>
+            {firstName}
+            {lastName}
+          </h2>
+        </div>
+    )
+  }
+}
 
 // A button component
-const Button = ({ text, onClick, style }) => (
-  <button style={style} onClick={onClick}>
-    {text}
-  </button>
-)
+class Button extends React.Component {
+  render() {
+    const { style, onClick, text } = this.props;
+    return (
+        <button style={style} onClick={onClick}>
+          {text}
+        </button>
+    )
+  }
+}
 
 // CSS styles in JavaScript Object
 const buttonStyles = {
@@ -38,10 +48,6 @@ const buttonStyles = {
 
 // class based component
 class Header extends React.Component {
-  constructor(props) {
-    super(props)
-    // the code inside the constructor run before any other code
-  }
   render() {
     console.log(this.props.data)
     const {
@@ -71,9 +77,6 @@ class Header extends React.Component {
 // TechList Component
 // class base component
 class TechList extends React.Component {
-  constructor(props) {
-    super(props)
-  }
   render() {
     const { techs } = this.props
     const techsFormatted = techs.map((tech) => <li key={tech}>{tech}</li>)
@@ -84,9 +87,6 @@ class TechList extends React.Component {
 // Main Component
 // Class Component
 class Main extends React.Component {
-  constructor(props) {
-    super(props)
-  }
   render() {
     return (
       <main>
@@ -115,9 +115,6 @@ class Main extends React.Component {
 // Footer Component
 // Class component
 class Footer extends React.Component {
-  constructor(props) {
-    super(props)
-  }
   render() {
     return (
       <footer>
